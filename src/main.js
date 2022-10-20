@@ -81,4 +81,9 @@ cardHolder.addEventListener("input", () => {
   ccHolder.innerText = cardHolder.value || "FULANO DA SILVA"
 })
 
+securityCodeMasked.on("accept", () => {
+  const ccSecurity = document.querySelector(".cc-security")
+  ccSecurity.innerText = securityCodeMasked.value || "123"
+})
+
 globalThis.setCardType = setCardType
