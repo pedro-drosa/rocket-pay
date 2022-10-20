@@ -86,4 +86,9 @@ securityCodeMasked.on("accept", () => {
   ccSecurity.innerText = securityCodeMasked.value || "123"
 })
 
+expirationDateMasked.on("accept", () => {
+  const ccExpiration = document.querySelector(".cc-expiration .value")
+  ccExpiration.innerText = expirationDateMasked.value || "02/32"
+})
+
 globalThis.setCardType = setCardType
