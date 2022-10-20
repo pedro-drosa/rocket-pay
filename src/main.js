@@ -91,4 +91,11 @@ expirationDateMasked.on("accept", () => {
   ccExpiration.innerText = expirationDateMasked.value || "02/32"
 })
 
+cardNumberMasked.on("accept", () => {
+  const cardType = cardNumberMasked.masked.currentMask.cardType
+  setCardType(cardType)
+  const cardNumber = document.querySelector(".cc-number")
+  cardNumber.innerText = cardNumberMasked.value || "1234 5678 9012 3456"
+})
+
 globalThis.setCardType = setCardType
